@@ -16,7 +16,7 @@ public class OrderOrchestratorController {
 
     @ResponseStatus(HttpStatus.ACCEPTED)
     @PostMapping
-    private void createOrder(@RequestBody OrderRequestDTO body) {
+    public void createOrder(@RequestBody OrderRequestDTO body) {
         orchestratorCreateOrderService.start(body);
     }
 
